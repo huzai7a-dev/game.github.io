@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.gameContainer{
+    height: 100vh;
+    width: 100vw;
+    background: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    width: 20px;
+    height: 100px;
+}
+
+.dribbler {
+    width: 120px;
+    height: 120px;
+    background: url(./dribble.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+.jump {
+    animation: jump .6s linear;
+}
+
+.defender {
+    width: 150px;
+    height: 150px;
+    background: url(./defender.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    bottom: 5px;
+    right: 10px;
+    position: absolute;
+    transform: rotateY(180deg);
+    /* animation: defAnim 2.5s linear infinite; */
+}
+.gameover {
+    height: 150px;
+    width: 400px;
+    background: chartreuse;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 10px;
+    display: none;
+}
+.gameover h3 {
+    margin-top: 10px;
+}
+
+#playagain{
+    background: transparent;
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+#playagain a {
+    color: #fff;
+    text-decoration:none;
+}
+
+
+
+@keyframes defAnim{
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 15px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 15px;
+    }
+}
